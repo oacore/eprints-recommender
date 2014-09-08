@@ -3,7 +3,7 @@ package EPrints::Plugin::Screen::EPrint::Box::CORE;
 @ISA = ( 'EPrints::Plugin::Screen::EPrint::Box' );
 
 #use strict;
-use Data::Dumper;
+#use Data::Dumper;
 
 use EPrints qw( no_check_user );
 use FileHandle;
