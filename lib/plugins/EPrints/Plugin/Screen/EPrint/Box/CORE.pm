@@ -133,20 +133,19 @@ sub render
             })(jQuery);",
         type=>"text/javascript");
     # Add external javascript file
-    my $scriptOutput = $xml->create_data_element("script",undef,src=>$base_url . "/javascript/CORE.widget.js");
+    #my $scriptOutput = $xml->create_data_element("script",undef,src=>$base_url . "/javascript/CORE.widget.js");
     # Add external CSS
-    my $cssOutput = $xml->create_data_element("link",undef,href=>$base_url . "/style/CORE.css");
+    #my $cssOutput = $xml->create_data_element("link",undef,href=>$base_url . "/style/CORE.css");
     		
 	# Create div to output javascript contents to
     my $pluginOutputDiv = $xml->create_data_element("div",undef,id=>"COREpluginOutput");
 	
 	# Add created xml elements to frag obj
     $frag->appendChild($pluginOutputDiv);
-    $frag->appendChild($scriptOutput);
+    
     $frag->appendChild($exp);
-    $frag->appendChild($cssOutput);
 
    
     return $frag;
-    }
+}
 	
