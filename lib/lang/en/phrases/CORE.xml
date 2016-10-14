@@ -2,6 +2,6 @@
 <!DOCTYPE phrases SYSTEM "entities.dtd">
 
 <epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
-	<epp:phrase id="Plugin/Screen/EPrint/Box/CORE:title">CORE (COnnecting REpositories)</epp:phrase>
-    <epp:phrase id="Plugin/Screen/EPrint/Box/CORE:heading">Similar documents in CORE (COnnecting REpositories)</epp:phrase>
+	<epp:phrase id="Plugin/Screen/EPrint/Box/CoreRecommender:title">CORE (COnnecting REpositories)</epp:phrase>
+    <epp:phrase id="Plugin/Screen/EPrint/Box/CORE:CoreRecommender">Similar documents in CORE (COnnecting REpositories)</epp:phrase>
 </epp:phrases>
