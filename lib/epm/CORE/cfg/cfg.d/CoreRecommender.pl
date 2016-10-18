@@ -10,3 +10,5 @@ $c->{plugins}->{"Screen::EPrint::Box::CoreRecommender"}->{appears}->{summary_lef
 
 $c->{plugins}{"Screen::EPrint::Box::CoreRecommender"}{params}{disable} = 0;
 
+# If you DO NOT want the css file from the CORE server, set this to 0 
+$c->{plugins}{"Screen::EPrint::Box::CoreRecommender"}{params}{include_css} = 1;
