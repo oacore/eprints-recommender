@@ -50,7 +50,6 @@ ENDCSS
                 localStorage.setItem('userInput', JSON.stringify(userInput));
 
 				". $external_css . "
-                d.getElementsByTagName('head')[0].appendChild(link);
             }(document, 'script', 'recommender-embed', '". $idRec ."', {}));",
         type=>"text/javascript");
             
