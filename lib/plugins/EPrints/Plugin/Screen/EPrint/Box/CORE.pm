@@ -19,7 +19,20 @@ sub render
 
     # Get ID of recommender from configuration
     $idRec = $self->param("id");
-    
+
+	my $external_css = '';
+	if( $self->param( "include_css" ) ){
+	
+		$external_css = <<"ENDCSS"
+				var link = d.createElement('link');
+                link.setAttribute('rel', 'stylesheet');
+                link.setAttribute('type', 'text/css');
+                link.setAttribute('href', coreAddress + '/recommender/embed-eprints-style.css');
+                d.getElementsByTagName('head')[0].appendChild(link);
+ENDCSS
+
+	}
+
     # Create javascript SnippetCode
     my $exp = $xml->create_data_element(
         "script","
@@ -36,11 +49,7 @@ sub render
                 localStorage.setItem('idRecommender', idRec);
                 localStorage.setItem('userInput', JSON.stringify(userInput));
 
-                var link = d.createElement('link');
-                link.setAttribute('rel', 'stylesheet');
-                link.setAttribute('type', 'text/css');
-                link.setAttribute('href', coreAddress + '/recommender/embed-eprints-style.css');
-                d.getElementsByTagName('head')[0].appendChild(link);
+				". $external_css . "
             }(document, 'script', 'recommender-embed', '". $idRec ."', {}));",
         type=>"text/javascript");
             
