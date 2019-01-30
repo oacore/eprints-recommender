@@ -53,6 +53,10 @@ ENDCSS
             }(document, 'script', 'recommender-embed', '". $idRec ."', {}));",
         type=>"text/javascript");
             
+    # Add section title to plugin window
+    my $pluginOutputTitle = $repository->html_phrase("Plugin/Screen/EPrint/Box/CORE:CoreRecommender:sectionTitle");
+    $frag->appendChild($pluginOutputTitle);
+    
     # Create div to output javascript contents to
     my $pluginOutputDiv = $xml->create_data_element("div",undef,id=>"coreRecommenderOutput");
     
